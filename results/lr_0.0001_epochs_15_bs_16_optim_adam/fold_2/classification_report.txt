@@ -1,0 +1,11 @@
+                 precision    recall  f1-score   support
+
+    bercak_daun       0.81      0.97      0.88        35
+  daun_berkerut       0.81      0.94      0.87        54
+  daun_berputar       0.91      0.66      0.76        32
+daun_menggulung       0.80      0.95      0.87        21
+ daun_menguning       0.79      0.54      0.64        35
+
+       accuracy                           0.82       177
+      macro avg       0.82      0.81      0.81       177
+   weighted avg       0.82      0.82      0.81       177

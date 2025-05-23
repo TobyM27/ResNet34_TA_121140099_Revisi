@@ -30,12 +30,33 @@ def main():
     
     full_dataset = load_data(args.data_dir)
 
-    # Manual hyperparameter combinations (edit this list between runs)
     manual_combinations = [
-        # Start with small batch sizes first
+        # First run
         {'lr': 0.001, 'epochs': 15, 'batch_size': 16, 'optimizer': 'adam'},
         {'lr': 0.001, 'epochs': 15, 'batch_size': 16, 'optimizer': 'sgd'},
-        # Add more combinations below this line
+        # Second run
+        {'lr': 0.01, 'epochs': 15, 'batch_size': 16, 'optimizer': 'adam'},
+        {'lr': 0.01, 'epochs': 15, 'batch_size': 16, 'optimizer': 'sgd'},
+        {'lr': 0.01, 'epochs': 15, 'batch_size': 32, 'optimizer': 'adam'},
+        {'lr': 0.01, 'epochs': 15, 'batch_size': 32, 'optimizer': 'sgd'},
+        # Third run
+        {'lr': 0.001, 'epochs': 10, 'batch_size': 16, 'optimizer': 'adam'},
+        {'lr': 0.001, 'epochs': 10, 'batch_size': 16, 'optimizer': 'sgd'},
+        {'lr': 0.001, 'epochs': 10, 'batch_size': 32, 'optimizer': 'adam'},
+        {'lr': 0.001, 'epochs': 10, 'batch_size': 32, 'optimizer': 'sgd'},
+        # Fouth run
+        {'lr': 0.001, 'epochs': 15, 'batch_size': 32, 'optimizer': 'adam'},
+        {'lr': 0.001, 'epochs': 15, 'batch_size': 32, 'optimizer': 'sgd'},
+        # Fifth run
+        {'lr': 0.0001, 'epochs': 10, 'batch_size': 16, 'optimizer': 'adam'},
+        {'lr': 0.0001, 'epochs': 10, 'batch_size': 16, 'optimizer': 'sgd'},
+        {'lr': 0.0001, 'epochs': 10, 'batch_size': 32, 'optimizer': 'adam'},
+        {'lr': 0.0001, 'epochs': 10, 'batch_size': 32, 'optimizer': 'sgd'},
+        # Sixth run (final run)
+        {'lr': 0.0001, 'epochs': 15, 'batch_size': 16, 'optimizer': 'adam'},
+        {'lr': 0.0001, 'epochs': 15, 'batch_size': 16, 'optimizer': 'sgd'},
+        {'lr': 0.0001, 'epochs': 15, 'batch_size': 32, 'optimizer': 'adam'},
+        {'lr': 0.0001, 'epochs': 15, 'batch_size': 32, 'optimizer': 'sgd'}
     ]
 
     # Resume tracking setup

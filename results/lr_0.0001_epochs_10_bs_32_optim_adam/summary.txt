@@ -1,0 +1,2 @@
+Mean Validation Acc: 0.5781
+Std Validation Acc: 0.0185
