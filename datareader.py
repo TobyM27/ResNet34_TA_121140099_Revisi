@@ -30,7 +30,7 @@ def load_data(data_dir):
         transforms.Resize(224)
     ]))
 
-def get_kfold_loaders(full_dataset, batch_size, input_size=224, k=5, seed=2003):
+def get_kfold_loaders(full_dataset, batch_size, input_size=224, k=5, seed=2003, num_workers=0):
     """
     Create K-Fold loaders for training and validation.
     """
@@ -61,11 +61,11 @@ def get_kfold_loaders(full_dataset, batch_size, input_size=224, k=5, seed=2003):
         train_loader = DataLoader(train_subset, 
                                batch_size=batch_size, 
                                shuffle=True,
-                               num_workers=2)
+                               num_workers=num_workers)
         val_loader = DataLoader(val_subset, 
                               batch_size=batch_size, 
                               shuffle=False,
-                              num_workers=2)
+                              num_workers=num_workers)
         
         fold_loaders.append((train_loader, val_loader))
     

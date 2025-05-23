@@ -1,0 +1,2 @@
+lr_0.001_epochs_15_bs_16_optim_adam
+lr_0.001_epochs_15_bs_16_optim_sgd
